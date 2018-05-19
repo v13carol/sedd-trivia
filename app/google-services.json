@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "612270512464",
+    "firebase_url": "https://sedd-15016.firebaseio.com",
+    "project_id": "sedd-15016",
+    "storage_bucket": "sedd-15016.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612270512464:android:a93dc827cb1caf9e",
+        "android_client_info": {
+          "package_name": "com.cejj.sedd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "612270512464-iakrll9ri7c0n7icf5osh42pecv6h670.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cejj.sedd",
+            "certificate_hash": "30e171227ceb96487d588a16d61fab08295af540"
+          }
+        },
+        {
+          "client_id": "612270512464-gbn6tjo8gufd93quhqo3793447nigsqp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAZpc2YfJnVXVQJ6hQOkpk03nMuP8YkSk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "612270512464-gbn6tjo8gufd93quhqo3793447nigsqp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
