@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">SEDD</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="about_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi consectetur ea iure nulla officiis rerum tempore tenetur vitae. Asperiores, corporis cupiditate dignissimos eius labore minus nihil quod sed ullam.</string>
+    <string name="developer"><![CDATA[Developer & UI Designer]]></string>
 </resources>
