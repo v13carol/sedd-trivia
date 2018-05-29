@@ -13,13 +13,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cejj.sedd.R;
 import com.cejj.sedd.fragments.AboutFragment;
 import com.cejj.sedd.fragments.ConfigFragment;
-import com.cejj.sedd.fragments.FeedbackFragment;
+import com.cejj.sedd.fragments.ReglasFragment;
 import com.cejj.sedd.fragments.PlayFragment;
 import com.cejj.sedd.fragments.ProfileFragment;
 import com.cejj.sedd.fragments.RankingFragment;
@@ -103,7 +102,7 @@ public class DrawerActivity extends AppCompatActivity {
                 viewIsAtHome = false;
                 break;
             case R.id.nav_feedback:
-                fragment = new FeedbackFragment();
+                fragment = new ReglasFragment();
                 title = "Feedback";
                 viewIsAtHome = false;
                 break;

@@ -11,7 +11,7 @@ import android.widget.VideoView;
 import com.cejj.sedd.R;
 
 
-public class FeedbackFragment extends BaseFragment{
+public class ReglasFragment extends BaseFragment{
 
 
 
@@ -25,7 +25,7 @@ public class FeedbackFragment extends BaseFragment{
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View view = inflater.inflate(R.layout.fragment_feedback, container, false);
+        View view = inflater.inflate(R.layout.fragment_reglas, container, false);
 
         VideoView videoview = (VideoView) view.findViewById(R.id.videoView);
         Uri uri = Uri.parse("android.resource://"+getActivity().getPackageName()+"/"+R.raw.bg_video);
