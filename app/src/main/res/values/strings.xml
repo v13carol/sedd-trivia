@@ -5,4 +5,8 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="about_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi consectetur ea iure nulla officiis rerum tempore tenetur vitae. Asperiores, corporis cupiditate dignissimos eius labore minus nihil quod sed ullam.</string>
     <string name="developer"><![CDATA[Developer & UI Designer]]></string>
+    <string name="step_of">Step %1$d of %2$d</string>
+    <string name="Reglas">1. Lorem ipsum dolor sit amet\n\n2. Lorem ipsum dolor sit amet \n\n3. Lorem ipsum dolor sit amet \n\n4. Lorem ipsum dolor sit amet \n\n5. Lorem ipsum dolor sit amet\n\n6. Lorem ipsum dolor sit amet</string>
+    <string name="middle_lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur ipsum in placerat molestie.  Fusce quis mauris a enim sollicitudin</string>
+
 </resources>

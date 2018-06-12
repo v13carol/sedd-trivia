@@ -27,18 +27,6 @@ public class ReglasFragment extends BaseFragment{
 
         View view = inflater.inflate(R.layout.fragment_reglas, container, false);
 
-        VideoView videoview = (VideoView) view.findViewById(R.id.videoView);
-        Uri uri = Uri.parse("android.resource://"+getActivity().getPackageName()+"/"+R.raw.bg_video);
-        videoview.setVideoURI(uri);
-        videoview.start();
-
-        videoview.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
-            }
-        });
-
         return view;
     }
 
