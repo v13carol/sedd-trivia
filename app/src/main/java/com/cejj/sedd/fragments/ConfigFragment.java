@@ -31,25 +31,25 @@ public class ConfigFragment extends BaseFragment{
 
         View view = inflater.inflate(R.layout.fragment_config, container, false);
 
-        SwitchCompat sonido = (SwitchCompat) view.findViewById(R.id.switch_sonido);
-        mediaPlayer = obj.initSonido(getActivity().getApplicationContext());
-        sonido.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
-        {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
-            {
-                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                    @Override
-                    public void onPrepared(MediaPlayer mp) {
-                        if (mediaPlayer.isPlaying()) {
-                            mediaPlayer.stop();
-                        }else {
-                            mediaPlayer.stop();
-                        }
-                    }
-                });
-            }
-        });
+//        SwitchCompat sonido = (SwitchCompat) view.findViewById(R.id.switch_sonido);
+//        mediaPlayer = obj.initSonido(getActivity().getApplicationContext());
+//        sonido.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+//        {
+//            @Override
+//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+//            {
+//                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+//                    @Override
+//                    public void onPrepared(MediaPlayer mp) {
+//                        if (mediaPlayer.isPlaying()) {
+//                            mediaPlayer.stop();
+//                        }else {
+//                            mediaPlayer.stop();
+//                        }
+//                    }
+//                });
+//            }
+//        });
 
         return view;
     }

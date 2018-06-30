@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "612270512464-sql7uegrc3mqff9cjh3a6hg6i55c4pch.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cejj.sedd",
+            "certificate_hash": "3a9598b3b1642905b91957dbbe27a7525dabce69"
+          }
+        },
+        {
           "client_id": "612270512464-gbn6tjo8gufd93quhqo3793447nigsqp.apps.googleusercontent.com",
           "client_type": 3
         }

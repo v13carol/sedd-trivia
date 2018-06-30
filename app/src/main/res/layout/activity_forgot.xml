@@ -15,22 +15,31 @@
         app:contentInsetStartWithNavigation="0dp"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="280dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:gravity="center"
             android:orientation="vertical">
 
+            <ImageView
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:src="@drawable/img_code_verification" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_marginTop="@dimen/spacing_medium"
                 android:text="Recuperar Contraseña"
                 android:textAlignment="center"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
@@ -41,19 +50,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_medium"
-                android:text="Introduce el correo electronico para recibir el codigo"
+                android:text="Introduce el correo electronico para solicitar la contraseña"
                 android:textAlignment="center"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 android:textColor="@color/grey_10" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="240dp"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -63,6 +63,7 @@
                 android:orientation="horizontal">
 
                 <android.support.design.widget.TextInputEditText
+                    android:id="@+id/reset_password_input"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -76,11 +77,13 @@
                     android:textStyle="bold"
                     android:theme="@style/EditText.White" />
 
+
             </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_large"
                 android:layout_gravity="center_horizontal">
 
                 <android.support.design.widget.FloatingActionButton
@@ -89,47 +92,28 @@
                     android:layout_height="wrap_content"
                     android:clickable="true"
                     android:textStyle="bold"
-                    android:tint="@color/cyan_800"
+                    android:tint="@color/colorPrimary"
                     app:backgroundTint="@android:color/white"
+                    android:layout_margin="@dimen/spacing_large"
                     app:fabSize="normal"
-                    app:rippleColor="@color/cyan_800"
-                    app:srcCompat="@drawable/ic_arrow_right" />
-
+                    app:rippleColor="@color/colorPrimary"
+                    app:srcCompat="@drawable/ic_arrow_right"
+                    android:focusable="true" />
 
                 <ProgressBar
                     android:id="@+id/progress_bar_forgot"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:theme="@style/ProgressBar.White"
+                    android:theme="@style/ProgressBar.Primary"
                     android:visibility="gone" />
 
             </RelativeLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="@dimen/spacing_xlarge"
-            android:gravity="center"
-            android:orientation="vertical">
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_medium"
-                android:text="SEDD TRIVIA"
-                android:textAlignment="center"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
-                android:textColor="@android:color/white"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
     </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
 
 </LinearLayout>

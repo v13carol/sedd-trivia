@@ -8,11 +8,21 @@
 
     <VideoView
         android:id="@+id/videoView"
+        android:foreground="@color/overlay_dark_40"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_alignParentTop="true"
         android:layout_gravity="center" />
+
+    <!--<ImageView-->
+        <!--android:id="@+id/bg_login"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:foreground="@color/overlay_dark_40"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--app:srcCompat="@drawable/bg_image"-->
+        <!--android:src="@color/overlay_dark_40" />-->
 
     <LinearLayout
         android:layout_width="330dp"
@@ -76,12 +86,13 @@
             android:theme="@style/EditText.White.Hint">
 
             <android.support.design.widget.TextInputEditText
+                android:id="@+id/userEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="-4dp"
                 android:layout_marginRight="-4dp"
-                android:hint="Usuario"
-                android:inputType="text"
+                android:hint="Correo"
+                android:inputType="textEmailAddress"
                 android:maxLength="50"
                 android:maxLines="1"
                 android:singleLine="true"
@@ -90,7 +101,6 @@
 
         </android.support.design.widget.TextInputLayout>
 
-
         <View
             android:layout_width="0dp"
             android:layout_height="@dimen/spacing_mlarge" />
@@ -98,9 +108,12 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@android:color/white"
             android:theme="@style/EditText.White.Hint">
 
             <android.support.design.widget.TextInputEditText
+                android:id="@+id/userPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="-4dp"
@@ -150,7 +163,8 @@
                 app:backgroundTint="@color/colorPrimary"
                 app:fabSize="normal"
                 app:rippleColor="@android:color/white"
-                app:srcCompat="@drawable/ic_arrow_right" />
+                app:srcCompat="@drawable/ic_arrow_right"
+                android:focusable="true" />
 
 
             <ProgressBar
@@ -183,8 +197,6 @@
                 android:textStyle="bold"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
                 android:textColor="@color/grey_10" />
-
-
         </LinearLayout>
 
         <View

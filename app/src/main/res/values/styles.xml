@@ -15,6 +15,11 @@
         <item name="colorControlNormal">@color/grey_10</item>
     </style>
 
+    <style name="ProgressBar.Primary" parent="@style/AppTheme">
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="colorAccent">@android:color/white</item>
+    </style>
+
     <style name="EditText.White.Hint" parent="@style/EditText.White">
         <item name="colorAccent">@android:color/white</item>
         <item name="android:textColorHint">@color/grey_10</item>
@@ -22,7 +27,7 @@
 
     <style name="ProgressBar.White" parent="@style/AppTheme">
         <item name="colorPrimary">@android:color/white</item>
-        <item name="colorAccent">@android:color/white</item>
+        <item name="colorAccent">@color/colorPrimary</item>
     </style>
 
     <style name="EditText.PrimaryDark" parent="@style/AppTheme">
