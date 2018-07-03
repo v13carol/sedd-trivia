@@ -32,7 +32,6 @@ import com.cejj.sedd.fragments.ProfileFragment;
 import com.cejj.sedd.fragments.RankingFragment;
 import com.cejj.sedd.fragments.ReglasFragment;
 import com.cejj.sedd.fragments.TutorialFragment;
-import com.cejj.sedd.fragments.TutorialLevel;
 import com.cejj.sedd.model.Player;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -48,7 +47,7 @@ public class DrawerActivity extends AppCompatActivity {
     private ActionBar actionBar;
     private Toolbar toolbar;
     private boolean viewIsAtHome;
-    private MediaPlayer player;
+    public MediaPlayer player;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
     private FirebaseDatabase mDB;
@@ -79,8 +78,8 @@ public class DrawerActivity extends AppCompatActivity {
             }
         };
 
-        mDB     = FirebaseDatabase.getInstance();
-        mRef    = mDB.getReference();
+        mDB = FirebaseDatabase.getInstance();
+        mRef = mDB.getReference();
 
         mRef.child("Profiles").child(mAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
             @Override
@@ -97,9 +96,14 @@ public class DrawerActivity extends AppCompatActivity {
         });
 
         initToolbar();
+        initSound();
+    }
+
+    public MediaPlayer initSound (){
         player = MediaPlayer.create(this , R.raw.game_song);
         player.setLooping(true); // Set looping
         player.setVolume(100 , 100);
+        return player;
     }
 
     private void initToolbar (){
@@ -119,7 +123,7 @@ public class DrawerActivity extends AppCompatActivity {
         TextView profile_name_header = RefView.findViewById(R.id.name_profile);
 
         //Genero en imagen de perfil
-        if(user.getGender().equals("Hombre")){
+        if(user.getGender().equals("Hombre")) {
             profile_img_header.setImageResource(R.drawable.male_profile_pic);
         } else {
             profile_img_header.setImageResource(R.drawable.female_profile_pic);
@@ -244,6 +248,18 @@ public class DrawerActivity extends AppCompatActivity {
     protected void onResume (){
         super.onResume();
         mAuth.addAuthStateListener(mAuthStateListener);
+        if(!haveNetworkConnection()) {
+            Snackbar.make(findViewById(android.R.id.content) , "Sin conexión" , Snackbar.LENGTH_INDEFINITE)
+                    .setAction("CONECTAR" , new View.OnClickListener() {
+                        @Override
+                        public void onClick (View view){
+                            startActivity(new Intent(WifiManager.ACTION_PICK_WIFI_NETWORK));
+                        }
+                    })
+                    .setActionTextColor(getResources().getColor(android.R.color.holo_blue_light))
+                    .show();
+        }
+        player.start();
         player.start();
     }
 
@@ -283,10 +299,10 @@ public class DrawerActivity extends AppCompatActivity {
     @Override
     public void onBackPressed (){
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
         if(drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        }
-        if(!viewIsAtHome) { //if the current view is not the Profile fragment
+        } else if(!viewIsAtHome) { //if the current view is not the Profile fragment
             displayView(R.id.nav_profile); //display the Profile fragment
         } else {
             moveTaskToBack(true);  //If view is in Profile fragment, exit application

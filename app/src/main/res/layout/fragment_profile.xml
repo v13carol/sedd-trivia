@@ -94,8 +94,8 @@
                                 android:id="@+id/experiencia"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="1252"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:text="0"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textStyle="bold" />
 
@@ -122,8 +122,8 @@
                                 android:id="@+id/rank"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="5"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:text="0"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textStyle="bold" />
 
@@ -150,8 +150,8 @@
                                 android:id="@+id/nivel"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="3"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:text="0"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textStyle="bold" />
 
@@ -190,8 +190,8 @@
                                 android:id="@+id/preguntas_total"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="151"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:text="0"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textStyle="bold" />
 
@@ -218,8 +218,8 @@
                                 android:id="@+id/correctas"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="66"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:text="0"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textStyle="bold" />
 
@@ -246,8 +246,8 @@
                                 android:id="@+id/incorrectas"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="85"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:text="0"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textStyle="bold" />
 

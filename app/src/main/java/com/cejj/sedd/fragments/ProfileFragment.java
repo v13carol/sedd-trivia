@@ -3,11 +3,9 @@ package com.cejj.sedd.fragments;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -44,29 +42,30 @@ public class ProfileFragment extends BaseFragment {
     private DatabaseReference mRef;
     private Player user;
 
-    public ProfileFragment() {
+
+    public ProfileFragment (){
         // Required empty public constructor
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate (Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView (LayoutInflater inflater , ViewGroup container , Bundle savedInstanceState){
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_profile, container, false);
+        View view = inflater.inflate(R.layout.fragment_profile , container , false);
         return view;
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+    public void onViewCreated (View view , @Nullable Bundle savedInstanceState){
+        super.onViewCreated(view , savedInstanceState);
 
-        mAuth   = FirebaseAuth.getInstance();
-        mDB     = FirebaseDatabase.getInstance();
-        mRef    = mDB.getReference();
+        mAuth = FirebaseAuth.getInstance();
+        mDB = FirebaseDatabase.getInstance();
+        mRef = mDB.getReference();
 
         mRef.child("Profiles").child(mAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
             @Override
@@ -95,14 +94,12 @@ public class ProfileFragment extends BaseFragment {
         Logro4 = view.findViewById(R.id.image_4);
         Logro5 = view.findViewById(R.id.image_5);
         linearLayout = view.findViewById(R.id.logros_container);
-
-        //Cargar Perfil
     }
 
-    public void loadProfile() {
+    public void loadProfile (){
 
         //Genero en imagen de perfil
-        if(user.getGender().equals("Hombre")){
+        if(user.getGender().equals("Hombre")) {
             profiePic.setImageResource(R.drawable.male_profile_pic);
         } else {
             profiePic.setImageResource(R.drawable.female_profile_pic);
@@ -124,31 +121,31 @@ public class ProfileFragment extends BaseFragment {
         incorrectAnswers.setText(user.getWrong());
 
         //Logros
-        if(user.getLogro1().equals("1")){
+        if(user.getLogro1().equals("1")) {
             Logro1.clearColorFilter();
         } else {
             Logro1.setColorFilter(R.color.overlay_dark_70);
         }
 
-        if(user.getLogro2().equals("1")){
+        if(user.getLogro2().equals("1")) {
             Logro2.clearColorFilter();
         } else {
             Logro2.setColorFilter(R.color.overlay_dark_70);
         }
 
-        if(user.getLogro3().equals("1")){
+        if(user.getLogro3().equals("1")) {
             Logro3.clearColorFilter();
         } else {
             Logro3.setColorFilter(R.color.overlay_dark_70);
         }
 
-        if(user.getLogro4().equals("1")){
+        if(user.getLogro4().equals("1")) {
             Logro4.clearColorFilter();
         } else {
             Logro4.setColorFilter(R.color.overlay_dark_70);
         }
 
-        if(user.getLogro5().equals("1")){
+        if(user.getLogro5().equals("1")) {
             Logro5.clearColorFilter();
         } else {
             Logro5.setColorFilter(R.color.overlay_dark_70);
@@ -157,42 +154,42 @@ public class ProfileFragment extends BaseFragment {
         Logro1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v){
-                Toast.makeText(getContext() , "Logro 1" , Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext() , "Logro por conseguir 1000 EXP" , Toast.LENGTH_SHORT).show();
             }
         });
 
         Logro2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v){
-                Toast.makeText(getContext() , "Logro 2" , Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext() , "Logro por alcanzar el nivel 5" , Toast.LENGTH_SHORT).show();
             }
         });
 
         Logro3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v){
-                Toast.makeText(getContext() , "Logro 3" , Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext() , "Logro por conseguir 100 respuestas correctas" , Toast.LENGTH_SHORT).show();
             }
         });
 
         Logro4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v){
-                Toast.makeText(getContext() , "Logro 4" , Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext() , "Logro por estar en el TOP 3" , Toast.LENGTH_SHORT).show();
             }
         });
 
         Logro5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v){
-                Toast.makeText(getContext() , "Logro 5" , Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext() , "Logro por completar 150 preguntas" , Toast.LENGTH_SHORT).show();
             }
         });
 
     }
 
     @Override
-    public void onDestroyView() {
+    public void onDestroyView (){
         super.onDestroyView();
     }
 }

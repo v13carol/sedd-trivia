@@ -11,6 +11,7 @@
         android:id="@+id/nested_scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
         android:scrollbars="none"
         android:scrollingCache="true">
 
@@ -216,7 +217,7 @@
                             android:background="@color/colorPrimary"
                             android:gravity="center"
                             android:text="Menu Principal"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@android:color/white" />
 
                     </com.balysv.materialripple.MaterialRippleLayout>
