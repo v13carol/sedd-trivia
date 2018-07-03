@@ -60,9 +60,9 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onAuthStateChanged (@NonNull FirebaseAuth firebaseAuth){
                 final FirebaseUser user = firebaseAuth.getCurrentUser();
-                if(user != null) {
+                if(user != null && user.isEmailVerified()) {
                     // Profile is signed in
-                    Log.i("Login" , "Login");
+                    Log.i("Login" , "Login " + user.getUid());
                     startActivity(new Intent(getApplicationContext() , DrawerActivity.class));
                     finish();
                 } else {
@@ -103,7 +103,6 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 break;
         }
     }
-
 
     private void registerUser (){
         final FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
@@ -190,8 +189,19 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                     user.put("name" , name);
                     user.put("password" , password);
                     user.put("email" , email);
+                    user.put("exp" , "0");
+                    user.put("lvls" , "0");
+                    user.put("rank" , "1");
+                    user.put("correct" , "0");
+                    user.put("wrong" , "0");
+                    user.put("level" , "0");
+                    user.put("logro1" , "1");
+                    user.put("logro2" , "0");
+                    user.put("logro3" , "0");
+                    user.put("logro4" , "1");
+                    user.put("logro5" , "0");
                     user.put("gender" , radioSelected.getText().toString().trim());
-
+                    //TODO: Agregar los campos que se nesecitan para el juego.
                     //Database
                     mRef.child("Profiles").child(user_id).setValue(user);
 

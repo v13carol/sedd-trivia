@@ -7,7 +7,7 @@ public class People {
     public int image;
     public Drawable imageDrw;
     public String name;
-    public String email;
+    public String exp;
     public boolean section = false;
 
     public People() {

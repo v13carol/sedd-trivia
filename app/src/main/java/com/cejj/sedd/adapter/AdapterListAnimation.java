@@ -42,12 +42,14 @@ public class AdapterListAnimation extends RecyclerView.Adapter<RecyclerView.View
     public class OriginalViewHolder extends RecyclerView.ViewHolder {
         public ImageView image;
         public TextView name;
+        public TextView exp;
         public View lyt_parent;
 
         public OriginalViewHolder(View v) {
             super(v);
             image = (ImageView) v.findViewById(R.id.image);
             name = (TextView) v.findViewById(R.id.name);
+            exp = (TextView) v.findViewById(R.id.experiencia_item);
             lyt_parent = (View) v.findViewById(R.id.lyt_parent);
         }
     }
@@ -68,7 +70,8 @@ public class AdapterListAnimation extends RecyclerView.Adapter<RecyclerView.View
             OriginalViewHolder view = (OriginalViewHolder) holder;
 
             People p = items.get(position);
-            view.name.setText(position + " | " + p.name);
+            view.name.setText((position + 1) + " | " + p.name);
+            view.exp.setText(p.exp);
             Tools.displayImageRound(ctx, view.image, p.image);
             view.lyt_parent.setOnClickListener(new View.OnClickListener() {
                 @Override

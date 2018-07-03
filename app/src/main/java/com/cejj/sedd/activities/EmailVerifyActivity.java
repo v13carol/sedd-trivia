@@ -173,14 +173,12 @@ public class EmailVerifyActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        mAuth.signOut();
         player.stop();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        mAuth.signOut();
         player.pause();
     }
 

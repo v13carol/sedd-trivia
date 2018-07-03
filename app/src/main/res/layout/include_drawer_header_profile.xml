@@ -21,7 +21,7 @@
             android:id="@+id/image_profile"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/photo_male_8"
+            android:src="@drawable/male_profile_pic"
             app:civ_border="true"
             app:civ_border_color="@color/grey_60"
             app:civ_border_width="2dp" />
@@ -34,9 +34,10 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/name_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="James Pratterson"
+                android:text="Usuario"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textColor="@color/grey_90"/>
 

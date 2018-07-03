@@ -62,7 +62,7 @@ public class LoginActivity extends AppCompatActivity {
                 final FirebaseUser user = firebaseAuth.getCurrentUser();
                 if(user != null && user.isEmailVerified()) {
                     // Profile is signed in
-                    Log.i("Login" , "Login");
+                    Log.i("Login" , "Login " + user.getUid());
                     startActivity(new Intent(getApplicationContext() , DrawerActivity.class));
                     finish();
                 } else {

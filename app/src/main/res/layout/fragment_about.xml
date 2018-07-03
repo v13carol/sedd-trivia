@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="@android:color/white"
-android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -19,8 +19,8 @@ android:orientation="vertical">
             android:layout_height="match_parent"
             android:background="@android:color/white"
             android:gravity="center"
-            android:padding="@dimen/spacing_xlarge"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_xlarge">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -59,8 +59,19 @@ android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_mlarge"
+                android:text="Software Engineering Dynamic Development"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/grey_90"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/spacing_xlarge"
+                android:layout_marginBottom="@dimen/spacing_mlarge"
                 android:layout_marginTop="@dimen/spacing_mlarge"
                 android:autoLink="web"
                 android:text="@string/about_text"
@@ -69,8 +80,8 @@ android:orientation="vertical">
                 android:textColor="@color/grey_80" />
 
             <LinearLayout
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -84,8 +95,8 @@ android:orientation="vertical">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="0dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="0dp"
                     android:text="Desarrolladores"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
                     android:textColor="@color/grey_90" />
@@ -93,10 +104,10 @@ android:orientation="vertical">
             </LinearLayout>
 
             <LinearLayout
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
 
 
                 <!--Primera card-->
@@ -299,19 +310,20 @@ android:orientation="vertical">
             </LinearLayout>
 
             <LinearLayout
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="SEDD TRIVIA"
-                    android:textStyle="bold"
-
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="@color/colorPrimaryDark" />
+
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

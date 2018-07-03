@@ -47,6 +47,7 @@ dependencies {
     implementation 'com.wdullaer:materialdatetimepicker:3.2.0'         // date & time picker
     implementation 'com.mikhaellopez:circularimageview:3.0.2'          // circle image view
     implementation 'com.google.android:flexbox:0.3.2@aar'              // google flexible box
+    implementation 'com.github.lzyzsd:circleprogress:1.1.0@aar'        // Circle Progress
     // Firebase
     implementation 'com.google.firebase:firebase-core:16.0.1'
     implementation 'com.google.firebase:firebase-firestore:17.0.2'

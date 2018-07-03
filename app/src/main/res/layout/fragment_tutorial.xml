@@ -1,96 +1,466 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey_20"
-    android:orientation="vertical">
+    android:background="@android:color/white">
 
-    <RelativeLayout
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/view_pager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:layout_alignParentBottom="true"
-            android:background="@color/grey_3"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/lyt_back"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="@dimen/spacing_middle"
-                android:focusable="true">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:tint="@color/grey_60"
-                    app:srcCompat="@drawable/ic_chevron_left" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ATRAS"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
-                    android:textColor="@color/grey_60"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/layoutDots"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:layout_marginTop="@dimen/spacing_middle"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="horizontal" />
+                app:cardCornerRadius="3dp"
+                app:cardElevation="2dp">
 
-            <LinearLayout
-                android:id="@+id/lyt_next"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="@dimen/spacing_middle"
-                android:focusable="true">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                <TextView
+                    <ImageView
+                        android:id="@+id/image_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:foreground="@color/overlay_dark_30"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/trivia_bg" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_xlarge">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Aprende sobre la Metodología"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@android:color/white"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Software Engineering Dynamic Development"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_10" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/spacing_middle"
+                                    android:layout_height="@dimen/spacing_middle"
+                                    android:layout_marginEnd="@dimen/spacing_medium"
+                                    android:layout_marginRight="@dimen/spacing_medium"
+                                    android:tint="@color/grey_10"
+                                    app:srcCompat="@drawable/ic_star" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="SEDD TRIVIA"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                    android:textColor="@color/grey_10" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/spacing_middle"
+                                    android:layout_height="@dimen/spacing_middle"
+                                    android:layout_marginLeft="@dimen/spacing_medium"
+                                    android:tint="@color/grey_10"
+                                    app:srcCompat="@drawable/ic_star" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:layout_weight="1"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@color/colorPrimaryLight"
+                        android:foreground="@color/overlay_dark_30"
+                        android:scaleType="centerCrop" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_large">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nivel 1"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@android:color/white" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_medium"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/spacing_middle"
+                                android:layout_height="@dimen/spacing_middle"
+                                android:layout_marginEnd="@dimen/spacing_medium"
+                                android:layout_marginRight="@dimen/spacing_medium"
+                                android:tint="@color/grey_10"
+                                app:srcCompat="@drawable/ic_star" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Requisitos Previos y Técnicas de DSDM."
+                                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_10" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_medium"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dificultad"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="@android:color/white" />
+
+                            <ImageView
+                                android:layout_width="@dimen/spacing_mlarge"
+                                android:layout_height="@dimen/spacing_mlarge"
+                                android:layout_marginLeft="@dimen/spacing_xmedium"
+                                android:tint="@color/grey_10"
+                                app:srcCompat="@drawable/ic_star" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/lvlone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SIGUIENTE"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
-                    android:textColor="@color/grey_60"
-                    android:textStyle="bold" />
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/spacing_large"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:tint="@color/colorPrimaryLight"
+                    app:backgroundTint="@android:color/white"
+                    app:fabSize="mini"
+                    app:rippleColor="@color/colorPrimary"
+                    app:srcCompat="@drawable/ic_play_arrow" />
 
-                <ImageView
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:layout_weight="1"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@color/colorPrimary"
+                        android:foreground="@color/overlay_dark_30"
+                        android:scaleType="centerCrop" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_large">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nivel 2"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@android:color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_medium"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/spacing_middle"
+                                android:layout_height="@dimen/spacing_middle"
+                                android:layout_marginEnd="@dimen/spacing_medium"
+                                android:layout_marginRight="@dimen/spacing_medium"
+                                android:tint="@color/grey_10"
+                                app:srcCompat="@drawable/ic_star" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Roles de DSDM y Fases."
+                                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_10" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_medium"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dificultad"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="@android:color/white" />
+
+                            <ImageView
+                                android:layout_width="@dimen/spacing_mlarge"
+                                android:layout_height="@dimen/spacing_mlarge"
+                                android:layout_marginLeft="@dimen/spacing_xmedium"
+                                android:tint="@color/grey_10"
+                                app:srcCompat="@drawable/ic_star" />
+
+                            <ImageView
+                                android:layout_width="@dimen/spacing_mlarge"
+                                android:layout_height="@dimen/spacing_mlarge"
+                                android:layout_marginLeft="@dimen/spacing_xmedium"
+                                android:tint="@color/grey_10"
+                                app:srcCompat="@drawable/ic_star" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/lvltwo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:tint="@color/grey_60"
-                    app:srcCompat="@drawable/ic_chevron_right" />
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/spacing_large"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:tint="@color/colorPrimary"
+                    app:backgroundTint="@android:color/white"
+                    app:fabSize="mini"
+                    app:rippleColor="@color/colorPrimary"
+                    app:srcCompat="@drawable/ic_play_arrow" />
 
-            </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_middle"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:layout_weight="1"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:foreground="@color/overlay_dark_30"
+                        android:scaleType="centerCrop" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_large">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nivel 3"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@android:color/white" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_medium"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/spacing_middle"
+                                android:layout_height="@dimen/spacing_middle"
+                                android:layout_marginEnd="@dimen/spacing_medium"
+                                android:layout_marginRight="@dimen/spacing_medium"
+                                android:tint="@color/grey_10"
+                                app:srcCompat="@drawable/ic_star" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Entregables y 9 Principios de DSDM."
+                                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_10" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_medium"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dificultad"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="@android:color/white" />
+
+                            <ImageView
+                                android:layout_width="@dimen/spacing_mlarge"
+                                android:layout_height="@dimen/spacing_mlarge"
+                                android:layout_marginLeft="@dimen/spacing_xmedium"
+                                android:tint="@color/grey_10"
+                                app:srcCompat="@drawable/ic_star" />
+
+                            <ImageView
+                                android:layout_width="@dimen/spacing_mlarge"
+                                android:layout_height="@dimen/spacing_mlarge"
+                                android:layout_marginLeft="@dimen/spacing_xmedium"
+                                android:tint="@color/grey_10"
+                                app:srcCompat="@drawable/ic_star" />
+
+                            <ImageView
+                                android:layout_width="@dimen/spacing_mlarge"
+                                android:layout_height="@dimen/spacing_mlarge"
+                                android:layout_marginLeft="@dimen/spacing_xmedium"
+                                android:tint="@color/grey_10"
+                                app:srcCompat="@drawable/ic_star" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/lvlthree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/spacing_large"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:tint="@color/colorPrimaryDark"
+                    app:backgroundTint="@android:color/white"
+                    app:fabSize="mini"
+                    app:rippleColor="@color/colorPrimary"
+                    app:srcCompat="@drawable/ic_play_arrow" />
+
+            </android.support.v7.widget.CardView>
 
         </LinearLayout>
 
-    </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
 
-</LinearLayout>
-
-
-
-
+</android.support.design.widget.CoordinatorLayout>
